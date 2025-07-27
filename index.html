@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackson Dow - iOS Developer Portfolio</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+            }
+    
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+    
+            header {
+                text-align: center;
+                padding: 60px 0;
+                color: white;
+            }
+    
+            .profile-image {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background: #fff;
+                margin: 0 auto 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 60px;
+                color: #667eea;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                transition: transform 0.3s ease;
+            }
+    
+            .profile-image:hover {
+                transform: scale(1.05);
+            }
+    
+            h1 {
+                font-size: 3rem;
+                margin-bottom: 10px;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+    
+            .subtitle {
+                font-size: 1.2rem;
+                opacity: 0.9;
+                margin-bottom: 30px;
+            }
+    
+            .nav-tabs {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-bottom: 40px;
+            }
+    
+            .tab-btn {
+                background: rgba(255,255,255,0.2);
+                color: white;
+                border: none;
+                padding: 12px 24px;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                backdrop-filter: blur(10px);
+            }
+    
+            .tab-btn:hover, .tab-btn.active {
+                background: rgba(255,255,255,0.3);
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+    
+            .content-section {
+                background: white;
+                border-radius: 20px;
+                padding: 40px;
+                margin-bottom: 30px;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+                display: none;
+                animation: fadeIn 0.5s ease;
+            }
+    
+            .content-section.active {
+                display: block;
+            }
+    
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+    
+            .section-title {
+                color: #667eea;
+                font-size: 2rem;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+    
+            .about-grid {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                gap: 40px;
+                align-items: start;
+            }
+    
+            .skills-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+            }
+    
+            .skill-item {
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                color: white;
+                padding: 15px;
+                border-radius: 10px;
+                text-align: center;
+                transform: translateY(0);
+                transition: transform 0.3s ease;
+            }
+    
+            .skill-item:hover {
+                transform: translateY(-5px);
+            }
+    
+            .apps-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+            }
+    
+            .app-card {
+                background: #f8f9fa;
+                border-radius: 15px;
+                padding: 25px;
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+    
+            .app-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            }
+    
+            .app-icon {
+                width: 80px;
+                height: 80px;
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                border-radius: 20px;
+                margin: 0 auto 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 30px;
+            }
+    
+            .resume-section {
+                text-align: center;
+            }
+    
+            .download-btn {
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                color: white;
+                padding: 15px 30px;
+                border: none;
+                border-radius: 50px;
+                font-size: 1.1rem;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+                text-decoration: none;
+                display: inline-block;
+                margin: 20px 10px;
+            }
+    
+            .download-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            }
+    
+            .contact-info {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                margin-top: 30px;
+            }
+    
+            .contact-item {
+                background: #f8f9fa;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+            }
+    
+            .contact-icon {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                color: #667eea;
+            }
+    
+            @media (max-width: 768px) {
+                .about-grid {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+                
+                .nav-tabs {
+                    flex-wrap: wrap;
+                    gap: 5px;
+                }
+                
+                .tab-btn {
+                    padding: 10px 16px;
+                    font-size: 0.9rem;
+                }
+                
+                h1 {
+                    font-size: 2rem;
+                }
+                
+                .content-section {
+                    padding: 20px;
+                }
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-image">JD</div>
+            <h1>Jackson Dow</h1>
+            <p class="subtitle">iOS Developer & AI Enthusiast</p>
+
+            <div class="nav-tabs">
+                <button class="tab-btn active" onclick="showTab(event, 'about')">About</button>
+                <button class="tab-btn" onclick="showTab(event, 'apps')">My Apps</button>
+                <button class="tab-btn" onclick="showTab(event, 'resume')">Resume</button>
+                <button class="tab-btn" onclick="showTab(event, 'contact')">Contact</button>
+            </div>
+        </header>
+
+        <div id="about" class="content-section active">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div>
+                    <h3>Overview About Me</h3>
+                        <ul style="margin-top: 15px; line-height: 2;">
+                            <li>🧠 Self-taught iOS app developer</li>
+                            <li>📱 10+ apps on the app store</li>
+                            <li>🏆 Expertise in Swift, UIKit and SwiftUI</li>
+                            <li>🚀 Seamlessly integrated diverse APIs and Xcode iOS SDKs to enhance application functionality and performance</li>
+                        </ul>
+                </div>
+                <div>
+                    <p>Hello there! I am a passionate iOS developer with a love for creating iOS mobile applications.
+                        My journey started at a young age where I was fascinated and obsessed with mobile apps on my iPad.
+                        This has since evolved into a career focusing on building user-friendly mobile experiences.
+                    </p>
+                    <br>
+                    <p>
+                        I specialize in Swift and UIKit but am also knowledgeable in SwiftUI. I have experience in everything from
+                        building simple utility apps (distance and area measuring app) to complex, AI and data-driven applications.
+                        I believe great apps are born from understanding user needs and translating them into easy-to-understand interfaces.
+                    </p>
+                    <br>
+                    <p>
+                        As an experienced iOS developer, I have successfully built and scaled multiple mobile applications for my own enterprise, focusing on delivering intuitive user experiences and robust functionality to grow user engagement.
+                        Currently, I am seeking iOS developer opportunities where I can apply my versatile skill set, spanning from UI/UX design, API integration, and app portfolio management—to contribute to your company's success and deliver impactful mobile solutions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="skills-list">
+                <div class="skill-item">Swift & SwiftUI</div>
+                <div class="skill-item">UIKit</div>
+                <div class="skill-item">Core Data and User Defaults</div>
+                <div class="skill-item">REST APIs</div>
+                <div class="skill-item">Git & Version Control(Fastlane)</div>
+                <div class="skill-item">TestFlight & Beta Testing</div>
+            </div>
+        </div>
+        <div id="apps" class="content-section">
+            <h2 class="section-title">My Apps</h2>
+            <div class="apps-grid">
+                <div class="app-card" onclick="window.open('https://apps.apple.com/ca/app/perfect-resume-ai/id6748420571', '_blank')" style="cursor: pointer;">
+                    <div class="app-icon">📝</div>
+                    <h3>Perfect Resume AI</h3>
+                    <p>AI-powered resume bulder that tailors resumes to specific job postings. Features intelligent keyword optimization and custom cover letters to help job seekers land interviews faster.</p>
+                    <div style="margin-top: 15px;">
+                        <span style="background: #e3f2fd; color: #1976d2; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">API Integration</span>
+                        <span style="background: #f3e5f5; color: #7b1fa2; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">Storekit Integration</span>
+                        <span style="background: #f3e5f5; color: #382eca; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">AI-Powered</span>
+                    </div>
+                </div>
+                
+                <div class="app-card" onclick="window.open('https://apps.apple.com/ca/app/brain-focus-frenzy/id6747737775/', '_blank')" style="cursor: pointer;">
+                    <div class="app-icon">🧠</div>
+                    <h3>Brain Focus Frenzy</h3>
+                    <p>Fast paced focus and memory games attempting to improve ADHD symptoms in youth developed from the overconsumption of short-form content</p>
+                    <div style="margin-top: 15px;">
+                        <span style="background: #e8f5e8; color: #2e7d32; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">Core Data</span>
+                        <span style="background: #fff3e0; color: #f57c00; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">UIKit</span>
+                    </div>
+                </div>
+                
+                <div class="app-card">
+                    <div class="app-icon">🛒</div>
+                    <h3>Smart Grocery Assistant AI (coming soon)</h3>
+                    <p>Smart cooking and grocery shopping assistant. Allows users to easily find recipes with their available items. Allows users to directly input items using barcode scanning.</p>
+                    <div style="margin-top: 15px;">
+                        <span style="background: #fce4ec; color: #c2185b; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">Vision Recognition</span>
+                        <span style="background: #e1f5fe; color: #0277bd; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">Core Data</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="resume" class="content-section">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-section">
+                <p>Download my complete resume to learn more about my experience, education, and projects.</p>
+                
+                <a href="#" class="download-btn" onclick="viewOnlineResume()">🌐 View Online Resume</a>
+                
+                <div style="margin-top: 40px; text-align: left;">
+                    <h3>Quick Overview</h3>
+                    <div style="margin-top: 20px;">
+                        <h4>Experience</h4>
+                        <p><strong>iOS Developer</strong> - MJax Consulting (May 2024-Present)</p>
+                        <p><strong>Technical Editor</strong> - Packt Publishing (November 2023 - May 2024)</p>
+                        
+                        <h4 style="margin-top: 25px;">Education</h4>
+                        <p><strong>BSc Computer Science</strong> - Wilfrid Laurier University (2022-2026(expected))</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="content-section">
+            <h2 class="section-title">Get In Touch</h2>
+            <p style="text-align: center; margin-bottom: 30px;">I'm always interested in new opportunities and collaborations. Let's connect!</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <h4>Email</h4>
+                    <p>jacksondow115@gmail.com</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <h4>LinkedIn</h4>
+                    <p>https://www.linkedin.com/in/jackson-dow-9b9b002a1/</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">🐙</div>
+                    <h4>GitHub</h4>
+                    <p>https://github.com/JacksonD115</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">🐦</div>
+                    <h4>Twitter/X (Trying to be more active here)</h4>
+                    <p>https://x.com/Jackson__115</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="mailto:jacksondow115@gmail.com" class="download-btn">Send me an email</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(event, tabName) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function viewOnlineResume() {
+            window.open('https://drive.google.com/file/d/1peyE9ycIk7LJIcz_DqU6k_6Rp18Qj0Zq/view?usp=sharing', '_blank');
+        }
+        
+        // Add smooth scrolling for better UX
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelector('.content-section.active').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+        
+        // Add some interactive hover effects
+        document.querySelectorAll('.app-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
