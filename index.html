@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jackson Dow - iOS Developer Portfolio</title>
+    <title>Jackson Dow - Software Engineer Portfolio</title>
         <style>
             * {
                 margin: 0;
@@ -14,8 +14,8 @@
             body {
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
                 line-height: 1.6;
-                color: #333;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: #e8eaf0;
+                background: linear-gradient(135deg, #4f8ef7 0%, #2563eb 100%);
                 min-height: 100vh;
             }
     
@@ -30,21 +30,16 @@
                 padding: 60px 0;
                 color: white;
             }
-    
             .profile-image {
                 width: 150px;
                 height: 150px;
                 border-radius: 50%;
-                background: #fff;
                 margin: 0 auto 30px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 60px;
-                color: #667eea;
+                overflow: hidden;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.2);
                 transition: transform 0.3s ease;
             }
+
     
             .profile-image:hover {
                 transform: scale(1.05);
@@ -70,7 +65,7 @@
             }
     
             .tab-btn {
-                background: rgba(255,255,255,0.2);
+                background: rgba(255,255,255,0.08);
                 color: white;
                 border: none;
                 padding: 12px 24px;
@@ -81,13 +76,13 @@
             }
     
             .tab-btn:hover, .tab-btn.active {
-                background: rgba(255,255,255,0.3);
+                background: rgba(255,255,255,0.15);
                 transform: translateY(-2px);
                 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             }
     
             .content-section {
-                background: white;
+                background: #1a1d27;
                 border-radius: 20px;
                 padding: 40px;
                 margin-bottom: 30px;
@@ -127,7 +122,7 @@
             }
     
             .skill-item {
-                background: linear-gradient(135deg, #667eea, #764ba2);
+                background: linear-gradient(135deg, #4f8ef7, #2563eb);
                 color: white;
                 padding: 15px;
                 border-radius: 10px;
@@ -147,7 +142,7 @@
             }
     
             .app-card {
-                background: #f8f9fa;
+                background: #1a1d27;
                 border-radius: 15px;
                 padding: 25px;
                 text-align: center;
@@ -157,6 +152,7 @@
             .app-card:hover {
                 transform: translateY(-10px);
                 box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                background: #21253a;
             }
     
             .app-icon {
@@ -177,7 +173,7 @@
             }
     
             .download-btn {
-                background: linear-gradient(135deg, #667eea, #764ba2);
+                background: linear-gradient(135deg, #4f8ef7, #2563eb);
                 color: white;
                 padding: 15px 30px;
                 border: none;
@@ -203,7 +199,7 @@
             }
     
             .contact-item {
-                background: #f8f9fa;
+                background: #1a1d27;
                 padding: 20px;
                 border-radius: 10px;
                 text-align: center;
@@ -244,9 +240,12 @@
 <body>
     <div class="container">
         <header>
-            <div class="profile-image">JD</div>
+            <div class="profile-image">
+                <img src="Profile-Image.jpeg" alt="Jackson Dow"
+                    style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+            </div>
             <h1>Jackson Dow</h1>
-            <p class="subtitle">iOS Developer | ML Integration & Data Engineering</p>
+            <p class="subtitle">Software Engineer | iOS, Full-Stack, and AI Product Development</p>
 
             <div class="nav-tabs">
                 <button class="tab-btn active" onclick="showTab(event, 'about')">About</button>
@@ -260,95 +259,103 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-grid">
                 <div>
-                    <h3>Overview About Me</h3>
+                    <h3>Overview</h3>
                         <ul style="margin-top: 15px; line-height: 2;">
-                            <li>🧠 Self-taught iOS app developer</li>
-                            <li>📱 10+ apps on the app store</li>
-                            <li>🏆 Expertise in Swift, UIKit and SwiftUI</li>
-                            <li>🚀 Seamlessly integrated diverse APIs and Xcode iOS SDKs to enhance application functionality and performance</li>
+                            <li>Built and shipped 10+ mobile applications</li>
+                            <li>5,000+ users across self-built products</li>
+                            <li>Strong in Swift, React, and product-focused iOS development</li>
+                            <li>Experience with APIs, Firebase, AI integrations, and real-world app workflows</li>
                         </ul>
                 </div>
                 <div>
-                    <p>Hello there! I am a passionate iOS developer with a love for creating iOS mobile applications.
-                        My journey started at a young age where I was fascinated and obsessed with mobile apps on my iPad.
-                        This has since evolved into a career focusing on building user-friendly mobile experiences.
+                    <p>I'm a software engineer focused on building and scaling practical products from idea to launch. I mainly
+                        develop for iOS, but have also worked heavily with backend services, AI integrations, and product workflows
+                        that solve real user problems.
                     </p>
                     <br>
                     <p>
-                        I specialize in Swift and UIKit but am also knowledgeable in SwiftUI. I have experience in everything from
-                        building simple utility apps (distance and area measuring app) to complex, AI and data-driven applications.
-                        I believe great apps are born from understanding user needs and translating them into easy-to-understand interfaces.
+                        I'm most energized by startup environments where speed, ownership, and iteration matter. I've built
+                        and shipped multiple apps myself, worked on iOS features professionally, and enjoy turning messy ideas
+                        into polished user experiences.
                     </p>
                     <br>
                     <p>
-                        As an experienced iOS developer, I have successfully built and scaled multiple mobile applications for my own enterprise, focusing on delivering intuitive user experiences and robust functionality to grow user engagement.
-                        Currently, I am seeking iOS developer opportunities where I can apply my versatile skill set, spanning from UI/UX design, API integration, and app portfolio management to contribute to your company's success and deliver impactful mobile solutions.
+                        My strongest areas are mobile development, REST API integrations, and backend-heavy product features,
+                        but more broadly I like being the type of engineer who can move a product forward wherever it needs support.
                     </p>
                 </div>
             </div>
 
             <div class="skills-list">
-                <div class="skill-item">Swift & SwiftUI</div>
-                <div class="skill-item">UIKit</div>
-                <div class="skill-item">Core Data and User Defaults</div>
-                <div class="skill-item">REST APIs</div>
-                <div class="skill-item">Git & Version Control (Fastlane)</div>
-                <div class="skill-item">TestFlight & Beta Testing</div>
+                <div class="skill-item">Swift, UIKit & SwiftUI</div>
+                <div class="skill-item">React & JavaScript / TypeScript</div>
+                <div class="skill-item">Firebase & Backend Integration</div>
+                <div class="skill-item">REST APIs & Cloud Services</div>
+                <div class="skill-item">AI Product Features</div>
+                <div class="skill-item">Product Architecture / MVVM</div>
             </div>
         </div>
         <div id="apps" class="content-section">
             <h2 class="section-title">My Apps</h2>
             <div class="apps-grid">
-                <div class="app-card" onclick="window.open('https://testflight.apple.com/join/t7bjNpWw', '_blank')" style="cursor: pointer;">
-                    <img src="mealify-icon.png" alt="Mealify icon" style="width: 100%; height: 100%; border-radius: 20px; object-fit: cover;">
-                    <h3>Mealify 2.0</h3>
-                    <p>Fast paced focus and memory games attempting to improve ADHD symptoms in youth developed from the overconsumption of short-form content</p>
-                    <div style="margin-top: 15px;">
-                        <span style="background: #e8f5e8; color: #2e7d32; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">Core Data</span>
-                        <span style="background: #fff3e0; color: #f57c00; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">UIKit</span>
-                    </div>
-                </div>
 
-                <div class="app-card" onclick="window.open('https://apps.apple.com/ca/app/perfect-resume-ai/id6748420571', '_blank')" style="cursor: pointer;">
-                    <div class="app-icon">📝</div>
-                    <h3>Perfect Resume AI</h3>
-                    <p>AI-powered resume bulder that tailors resumes to specific job postings. Features intelligent keyword optimization and custom cover letters to help job seekers land interviews faster.</p>
+                <div class="app-card" onclick="window.open('https://testflight.apple.com/join/t7bjNpWw', '_blank')" style="cursor: pointer;">
+                    <div class="app-icon">
+                        <img src="mealify-icon.png" alt="Mealify icon" style="width: 100%; height: 100%; border-radius: 20px; object-fit: cover;">
+                    </div>
+                    <h3>Mealify 2.0</h3>
+                    <p>Architected and built a UIKit-based iOS application for pantry management, recipe discovery, and meal planning using Swift, Firebase, Google Cloud, and REST API integrations. Developed an AI pantry scanning workflow that processes item data from a single photo and maps results into structured pantry records for use throughout the application.
+                        <br><br>
+                        Implemented natural-language ingredient matching and recommendation logic to determine recipe readiness, identify missing ingredients, and generate meal plans based on items already available to the user. Added URL-based recipe parsing and Firebase-backed recipe sharing features to support community content and expand the application beyond static local data.</p>
                     <div style="margin-top: 15px;">
-                        <span style="background: #e3f2fd; color: #1976d2; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">API Integration</span>
-                        <span style="background: #f3e5f5; color: #7b1fa2; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">Storekit Integration</span>
-                        <span style="background: #f3e5f5; color: #382eca; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">AI-Powered</span>
+                        <span style="background: #1e3a5f; color: #93c5fd; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">API Integration</span>
+                        <span style="background: #3b1f4f; color: #d8b4fe; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">StoreKit Integration</span>
+                        <span style="background: #31204a; color: #c4b5fd; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">AI-Powered</span>
                     </div>
                 </div>
                 
                 <div class="app-card" onclick="window.open('https://apps.apple.com/ca/app/mealify-prep-meals-with-ease/id6749214214', '_blank')" style="cursor: pointer;">
-                    <div class="app-icon">🛒</div>
+                    <div class="app-icon">
+                        <img src="Mealify1.0-icon.png" alt="Mealify 1.0 Icon" style="width: 100%; height: 100%; border-radius: 20px; object-fit: cover;">
+                    </div>
                     <h3>Mealify</h3>
-                    <p>Engineered a comprehensive meal-planning solution built on a robust MVVM architecture with Core Data persistence, enabling users to simplify weekly meal organization
-                         and streamline grocery list creation. The application features critical external integrations, utilizing RESTful API calls for seamless real-time barcode scanning and product
-                          lookup to enhance data accuracy and user efficiency at the point of sale.</p>
+                    <p>Architected and developed an iOS meal-planning application using MVVM, Core Data, and RESTful API integrations. 
+                        Built persistent pantry, grocery list, and recipe workflows, including barcode-driven product lookup and 
+                        data synchronization patterns for responsive user interactions. Scaled to 2,000+ users</p>
                     <div style="margin-top: 15px;">
-                        <span style="background: #fce4ec; color: #c2185b; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">Firebase Database</span>
-                        <span style="background: #e1f5fe; color: #0277bd; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">Core Data</span>
+                        <span style="background: #1f3a2a; color: #86efac; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">Firebase Database</span>
+                        <span style="background: #1f3a2a; color: #86efac; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">Core Data</span>
                         <br>
-                        <span style="background: #e8f5e8; color: #f57c00; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">REST Api</span>
+                        <span style="background: #1e3a5f; color: #93c5fd; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">REST API</span>
                     </div>
                 </div>
 
-                <br>
-                <div class="app-card" style="cursor: pointer;">
-                    <div class="app-icon">📊</div>
-                    <h3>Smart Macros Tracker (In Testing)</h3>
-                    <p>Seamless Calorie and Macro Tracker that solves the data entry problem using cutting-edge AI. The solution leveraged Apple's Vision Framework to perform Optical Character Recognition
-                         (OCR) on nutrition labels, feeding the results into a custom Intelligent Document Processing (IDP) pipeline. 
-                         This pipeline uses Named Entity Recognition (NER) to parse and structure macro data, allowing users to seamlessly enter meals. 
-                         Additionally, the application features a dynamic meal planning algorithm that generates personalized daily plans based on individual macro goals and preferences. 
-                         The application also provides users with insightful data visualizations and tracking charts to optimize their nutritional improvement.
+                <div class="app-card" onclick="window.open('https://testflight.apple.com/join/T7eewAFk', '_blank')" style="cursor: pointer;">
+                    <div class="app-icon">
+                        <img src="Macros-tracker-icon.png" alt="Macros Tracker Icon" style="width: 100%; height: 100%; border-radius: 20px; object-fit: cover;">
+                    </div>
+                    <h3>Smart Macros Tracker (In Progress, Open for testing)</h3>
+                    <p>Developed an OCR-driven nutrition tracking app using Apple Vision to extract structured data from food labels. Designed a parsing and normalization workflow for macro data entry,
+                         then integrated meal-planning logic and chart-based progress tracking to support personalized nutrition monitoring.
                     </p>
                     <div style="margin-top: 15px;">
-                        <span style="background: #e8f5e8; color: #2e7d32; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">Apple Vision</span>
+                        <span style="background: #1f3a2a; color: #86efac; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">Apple Vision</span>
                         <br>
-                        <span style="background: #fff3e0; color: #f57c00; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">OCR and NLP</span>
-                        <span style="background: #fff3e0; color: #f57c00; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">API Management</span>
+                        <span style="background: #31204a; color: #c4b5fd; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">OCR and NLP</span>
+                        <span style="background: #1e3a5f; color: #93c5fd; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">API Management</span>
+                    </div>
+                </div>
+
+                <div class="app-card" onclick="window.open('https://apps.apple.com/ca/app/perfect-resume-ai/id6748420571', '_blank')" style="cursor: pointer;">
+                    <div class="app-icon">
+                        <img src="Perfect-resume-icon.png" alt="Perfect Resume AI Icon" style="width: 100%; height: 100%; border-radius: 20px; object-fit: cover;">
+                    </div>
+                    <h3>Perfect Resume AI</h3>
+                    <p>AI-powered resume builder that tailors resumes to specific job postings. Features intelligent keyword optimization and custom cover letters to help job seekers land interviews faster.</p>
+                    <div style="margin-top: 15px;">
+                        <span style="background: #1e3a5f; color: #93c5fd; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">API Integration</span>
+                        <span style="background: #3b1f4f; color: #d8b4fe; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">StoreKit Integration</span>
+                        <span style="background: #31204a; color: #c4b5fd; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 0 5px;">AI-Powered</span>
                     </div>
                 </div>
             </div>
@@ -377,7 +384,7 @@
 
         <div id="contact" class="content-section">
             <h2 class="section-title">Get In Touch</h2>
-            <p style="text-align: center; margin-bottom: 30px;">I'm always interested in new opportunities and collaborations. Let's connect!</p>
+            <p style="text-align: center; margin-bottom: 30px;">Interested in startup, product, and software engineering opportunities</p>
             
             <div class="contact-info">
                 <div class="contact-item">
@@ -400,7 +407,7 @@
                 
                 <div class="contact-item">
                     <div class="contact-icon">🐦</div>
-                    <h4>Twitter/X (Trying to be more active here)</h4>
+                    <h4>Twitter/X</h4>
                     <p>https://x.com/Jackson__115</p>
                 </div>
             </div>
@@ -426,8 +433,7 @@
         function viewOnlineResume() {
             window.open('https://drive.google.com/file/d/1-udc9uLCYfbE1g4Byh_lL5ty8JEFaIWw/view?usp=sharing', '_blank');
         }
-        
-        // Add smooth scrolling for better UX
+
         document.querySelectorAll('.tab-btn').forEach(button => {
             button.addEventListener('click', function() {
                 document.querySelector('.content-section.active').scrollIntoView({
@@ -436,8 +442,7 @@
                 });
             });
         });
-        
-        // Add some interactive hover effects
+
         document.querySelectorAll('.app-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px) scale(1.02)';
