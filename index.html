@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Jackson Dow - Software Engineer Portfolio</title>
         <style>
             * {
@@ -203,6 +204,14 @@
                 padding: 20px;
                 border-radius: 10px;
                 text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+                display: block;
+            }
+
+            .contact-icon:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+                background: #21253a;
             }
     
             .contact-icon {
@@ -384,32 +393,34 @@
 
         <div id="contact" class="content-section">
             <h2 class="section-title">Get In Touch</h2>
-            <p style="text-align: center; margin-bottom: 30px;">Interested in startup, product, and software engineering opportunities</p>
+            <p style="text-align: center; margin-bottom: 30px;">
+                Interested in startup, product, and software engineering opportunities
+            </p>
             
             <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
+                <a href="mailto:jacksondow115@gmail.com" class="contact-item" style="text-decoration: none; color: inherit;">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                     <h4>Email</h4>
                     <p>jacksondow115@gmail.com</p>
-                </div>
+                </a>
                 
-                <div class="contact-item">
-                    <div class="contact-icon">💼</div>
+                <a href="https://www.linkedin.com/in/jackson-dow-9b9b002a1/" target="_blank" class="contact-item" style="text-decoration: none; color: inherit;">
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
                     <h4>LinkedIn</h4>
-                    <p>https://www.linkedin.com/in/jackson-dow-9b9b002a1/</p>
-                </div>
+                    <p>View Profile</p>
+                </a>
                 
-                <div class="contact-item">
-                    <div class="contact-icon">🐙</div>
+                <a href="https://github.com/JacksonD115" target="_blank" class="contact-item" style="text-decoration: none; color: inherit;">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
                     <h4>GitHub</h4>
-                    <p>https://github.com/JacksonD115</p>
-                </div>
+                    <p>View Profile</p>
+                </a>
                 
-                <div class="contact-item">
-                    <div class="contact-icon">🐦</div>
+                <a href="https://x.com/Jackson__115" target="_blank" class="contact-item" style="text-decoration: none; color: inherit;">
+                    <div class="contact-icon"><i class="fab fa-x-twitter"></i></div>
                     <h4>Twitter/X</h4>
-                    <p>https://x.com/Jackson__115</p>
-                </div>
+                    <p>View Profile</p>
+                </a>
             </div>
             
             <div style="text-align: center; margin-top: 40px;">
